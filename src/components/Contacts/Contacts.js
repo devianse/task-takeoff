@@ -7,6 +7,7 @@ const Contacts = () => {
   const [filteredData, setFilteredData] = useState();
   const [visible, setVisible] = useState(false);
   const [input, setInput] = useState();
+  const [loading, setLoading] = useState(false);
 
   const nameInputRef = useRef();
   const userNameInputRef = useRef();

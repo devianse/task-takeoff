@@ -4,7 +4,6 @@ const ContactItem = (props) => {
     <li className={classes.li}>
       <div>
         <h3>{props.name}</h3>
-        <p>{props.phone}</p>
         <p>{props.username}</p>
         <button onClick={props.deleteItem}>Удалить контакт</button>
       </div>
