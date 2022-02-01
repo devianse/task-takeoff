@@ -7,10 +7,10 @@ const Contacts = () => {
   const [filteredData, setFilteredData] = useState();
   const [visible, setVisible] = useState(false);
   const [input, setInput] = useState();
-  const [loading, setLoading] = useState(false);
 
   const nameInputRef = useRef();
   const userNameInputRef = useRef();
+  const timer = useRef(null);
 
   const fetchData = async () => {
     const response = await fetch("https://jsonplaceholder.typicode.com/users");
@@ -22,26 +22,24 @@ const Contacts = () => {
   }, []);
 
   useEffect(() => {
-    const delay = setTimeout(() => {
-      if (input) {
-        setFilteredData(
-          data.filter(
-            (item) =>
-              item.name.toLowerCase().includes(input) ||
-              item.username.toLowerCase().includes(input)
-          )
-        );
-      } else {
-        setFilteredData(data);
-      }
-    }, 300);
-    return () => {
-      clearTimeout(delay);
-    };
+    if (input) {
+      setFilteredData(
+        data.filter(
+          (item) =>
+            item.name.toLowerCase().includes(input) ||
+            item.username.toLowerCase().includes(input)
+        )
+      );
+    } else {
+      setFilteredData(data);
+    }
   }, [data, input]);
 
   const changeHandler = (event) => {
-    setInput(event.target.value);
+    clearTimeout(timer.current);
+    timer.current = setTimeout(() => {
+      setInput(event.target.value);
+    }, 500);
   };
 
   const deleteHandler = (id) => {
