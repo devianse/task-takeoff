@@ -1,0 +1,70 @@
+.contacts {
+  margin: 3rem auto;
+  text-align: center;
+}
+
+.contacts h1 {
+  font-size: 5rem;
+}
+.contacts div {
+  margin: 1rem auto;
+  width: 50%;
+}
+.nav {
+  display: flex;
+  justify-content: space-around;
+}
+.nav button {
+  font: inherit;
+  border: 1px solid white;
+  font-weight: bold;
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.nav button:hover {
+  background-color: #c2e7f0;
+  color: #38015c;
+}
+
+.control {
+  margin-bottom: 0.5rem;
+}
+
+.control label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.control input,
+.control textarea {
+  font: inherit;
+  padding: 0.35rem;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  border: 1px solid #c1d1d1;
+  display: block;
+  width: 100%;
+  font-size: 1.25rem;
+}
+
+.control input:focus,
+.control textarea:focus {
+  background-color: #cbf8f8;
+  outline-color: teal;
+}
+
+.actions button {
+  font: inherit;
+  border: 1px solid white;
+  font-weight: bold;
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.actions button:hover {
+  background-color: #c2e7f0;
+  color: #38015c;
+}

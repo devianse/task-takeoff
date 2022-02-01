@@ -36,7 +36,7 @@ const ProfileForm = () => {
   return (
     <form className={classes.form} onSubmit={submitHandler}>
       <div className={classes.control}>
-        <label htmlFor="new-password">New Password</label>
+        <label htmlFor="new-password">Новый пароль</label>
         <input
           type="password"
           id="new-password"
@@ -45,7 +45,7 @@ const ProfileForm = () => {
         />
       </div>
       <div className={classes.action}>
-        <button>Change Password</button>
+        <button>Сменить пароль</button>
       </div>
     </form>
   );

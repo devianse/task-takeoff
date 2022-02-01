@@ -3,6 +3,7 @@ import { useContext } from "react";
 import Layout from "./components/Layout/Layout";
 import AuthPage from "./pages/AuthPage";
 import HomePage from "./pages/HomePage";
+import ContactsPage from "./pages/ContactsPage";
 import AuthContext from "./store/auth-context";
 import ProfilePage from "./pages/ProfilePage";
 
@@ -23,6 +24,11 @@ function App() {
         {authCtx.isLoggedIn && (
           <Route path="/profile">
             <ProfilePage />
+          </Route>
+        )}
+        {authCtx.isLoggedIn && (
+          <Route path="/contacts">
+            <ContactsPage />
           </Route>
         )}
         <Route path="*">

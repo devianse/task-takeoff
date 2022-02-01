@@ -16,23 +16,28 @@ const MainNavigation = () => {
   return (
     <header className={classes.header}>
       <Link to="/">
-        <div className={classes.logo}>React Auth</div>
+        <div className={classes.logo}>Takeoff Staff</div>
       </Link>
       <nav>
         <ul>
           {!isLoggedIn && (
             <li>
-              <Link to="/auth">Login</Link>
+              <Link to="/auth">Войти</Link>
             </li>
           )}
           {isLoggedIn && (
             <li>
-              <Link to="/profile">Profile</Link>
+              <Link to="/contacts">Контакты</Link>
             </li>
           )}
           {isLoggedIn && (
             <li>
-              <button onClick={logoutHandler}>Logout</button>
+              <Link to="/profile">Профиль</Link>
+            </li>
+          )}
+          {isLoggedIn && (
+            <li>
+              <button onClick={logoutHandler}>Выйти</button>
             </li>
           )}
         </ul>

@@ -4,7 +4,7 @@ import classes from "./UserProfile.module.css";
 const UserProfile = () => {
   return (
     <section className={classes.profile}>
-      <h1>Settings</h1>
+      <h1>Настройки</h1>
       <ProfileForm />
     </section>
   );

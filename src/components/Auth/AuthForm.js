@@ -71,14 +71,14 @@ const AuthForm = () => {
 
   return (
     <section className={classes.auth}>
-      <h1>{isLogin ? "Login" : "Sign Up"}</h1>
+      <h1>{isLogin ? "Войти" : "Зарегистрироваться"}</h1>
       <form onSubmit={submitHandler}>
         <div className={classes.control}>
-          <label htmlFor="email">Your Email</label>
+          <label htmlFor="email">Ваша Почта</label>
           <input type="email" id="email" required ref={emailInputRef} />
         </div>
         <div className={classes.control}>
-          <label htmlFor="password">Your Password</label>
+          <label htmlFor="password">Ваш Пароль</label>
           <input
             type="password"
             id="password"
@@ -88,14 +88,14 @@ const AuthForm = () => {
         </div>
         <div className={classes.actions}>
           {!isLoading && (
-            <button>{isLogin ? "Login" : "Create Account"}</button>
+            <button>{isLogin ? "Войти" : "Создать аккаунт"}</button>
           )}
-          {isLoading && <p>Sending request...</p>}
+          {isLoading && <p>Отправляю запрос...</p>}
           <button
             type="button"
             className={classes.toggle}
             onClick={switchAuthModeHandler}>
-            {isLogin ? "Create new account" : "Login with existing account"}
+            {isLogin ? "Создать аккаунт" : "Войти в существующий аккаунт"}
           </button>
         </div>
       </form>
